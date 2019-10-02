@@ -23,7 +23,7 @@
 def match_ends(words):
   count = 0
   for w in words:
-    if (len(w) > 1) and (w[0] == w[len(w)-1]):
+    if (len(w) > 1) and (w[0] == w[-1]):
       count += 1
   return count
 
@@ -54,7 +54,7 @@ def front_x(words):
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element form each tuple.
 def sort_last(tuples):
-  tuples.sort(key = lambda t: t[len(t)-1])
+  tuples.sort(key = lambda t: t[-1])
   # Alternatively : sorted(tuples, key=last)
   return tuples
 
